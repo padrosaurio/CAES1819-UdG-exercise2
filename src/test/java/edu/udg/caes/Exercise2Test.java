@@ -19,21 +19,10 @@ public class Exercise2Test {
     {
         a.add(1);
         a.add(2);
-        a.add(3);
+        b.add(2);
         b.add(3);
-        b.add(4);
 
     }
 
-    @Test
-    public void testUnion()
-    {
-        Vector<Integer> expected = new Vector();
-        for(int i=1; i<=4; i++) expected.add(i);
-
-        final Vector union = new Exercise2().union(a,b);
-
-        assertEquals(union, expected);
-    }
 
 }
