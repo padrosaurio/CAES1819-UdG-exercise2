@@ -13,7 +13,20 @@ public class Exercise2 {
      */
     public static Vector union (Vector a, Vector b)
     {
-        throw new UnsupportedOperationException("Non implemented yet");
+        Vector union = new Vector();
+
+        for(int i=0;i<a.size();i++){
+            if(!union.contains(a.get(i))){
+                union.add(a.get(i));
+            }
+        }
+        for(int i=0;i<b.size();i++){
+            if(!union.contains(b.get(i))){
+                union.add(b.get(i));
+            }
+        }
+
+        return union;
     }
 
 }
