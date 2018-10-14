@@ -15,18 +15,17 @@ public class Exercise2 {
     {
         Vector union = new Vector();
 
-        for(int i=0;i<a.size();i++){
-            if(!union.contains(a.get(i))){
+        if(a==null || b==null) return union;
+        else{
+            for(int i=0;i<a.size();i++){
                 union.add(a.get(i));
             }
-        }
-        for(int i=0;i<b.size();i++){
-            if(!union.contains(b.get(i))){
+            for(int i=0;i<b.size();i++){
                 union.add(b.get(i));
             }
+            return union;
         }
 
-        return union;
     }
 
 }
