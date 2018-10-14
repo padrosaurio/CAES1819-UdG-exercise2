@@ -47,31 +47,18 @@ public class Exercise2Test {
     @Test
     public void testUnionWithOneNullVector()
     {
-        //Vector inicialitzat però vuit
-        Vector<Integer> expected = new Vector();
-
         final Vector union = new Exercise2().union(c,b);
 
-        assertEquals(union, expected);
+        assertEquals(union.size(), 0);
     }
 
     //El vector c i el d són null, per tant, no té elements i la funció hauria de retornar una llista buida
     @Test
     public void testUnionWithBothNullVector()
     {
-        //Vector inicialitzat però vuit
-        Vector<Integer> expected = new Vector();
-
         final Vector union = new Exercise2().union(c,d);
 
-        assertEquals(union, expected);
-    }
-
-    //Els vectors tenen el mateix tipus de dades.
-    @Test
-    public void unioDeDiferentsTipusTest()
-    {
-        assertThrows(InputMismatchException.class, () -> Exercise2.union(a,e));
+        assertEquals(union.size(), 0);
     }
 
 
